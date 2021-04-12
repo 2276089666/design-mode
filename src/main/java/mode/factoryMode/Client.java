@@ -1,6 +1,9 @@
 package mode.factoryMode;
 
-import mode.factoryMode.factory.FileLogFactory;
+import mode.factoryMode.connection.Connection;
+import mode.factoryMode.factory.MysqlFactory;
+import mode.factoryMode.factory.OracleFactory;
+import mode.factoryMode.statement.Statement;
 
 /**
  * @Author ws
@@ -9,8 +12,12 @@ import mode.factoryMode.factory.FileLogFactory;
  */
 public class Client {
     public static void main(String[] args) {
-        LogFactory logFactory= new FileLogFactory();
-        Log log = logFactory.createLog();
-        log.writeLog();
+        DBFactory mysqlFactory = new MysqlFactory();
+        Connection connection = mysqlFactory.createConnection();
+        connection.getConnection();
+
+        DBFactory oracleFactory = new OracleFactory();
+        Statement statement = oracleFactory.createStatement();
+        statement.getStatement();
     }
 }
