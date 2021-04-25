@@ -7,7 +7,10 @@ package mode.adapterMode;
  */
 public class Main {
     public static void main(String[] args) {
-        Adapter adapter = new Adapter(new Adaptee());
+        Adapter adapter = new Adapter();
+        adapter.setAdaptee(new ConcreteAdaptee());
+        adapter.setTarget(new ConcreteTarget());
         adapter.Request();
+        adapter.SpecificRequest();
     }
 }
