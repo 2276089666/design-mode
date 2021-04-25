@@ -1,5 +1,7 @@
 package mode.bridgeMode;
 
+import mode.adapterMode.Adapter;
+import mode.adapterMode.ConcreteAdaptee;
 import mode.bridgeMode.imageFormat.JPGImage;
 import mode.bridgeMode.imageFormat.PNGImage;
 import mode.bridgeMode.imageFormat.TIFImage;
@@ -23,9 +25,17 @@ public class MainClass {
         jpgImage.setImageImp(new UnixImpl());
         jpgImage.parseFile("aaa.bat");
 
+
+        // 加上适配器
         System.out.println();
         Image tifImage =new TIFImage();
-        tifImage.setImageImp(new MacImpl());
+        MacImpl mac = new MacImpl();
+
+        Adapter adapter = new Adapter();
+        adapter.setAdaptee(new ConcreteAdaptee());
+
+        mac.setAdapter(adapter);
+        tifImage.setImageImp(mac);
         tifImage.parseFile("aaa.bat");
     }
 }
