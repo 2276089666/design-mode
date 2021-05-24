@@ -1,0 +1,23 @@
+@startuml
+interface Adaptee{
+    public void SpecificRequest();
+}
+interface Target{
+    public void Request();
+}
+class Adapter implements Target,Adaptee{
+    Adaptee adaptee;
+    Target target;
+    public void setAdaptee(Adaptee adaptee) ;
+    public void setTarget(Target target) ;
+    public void SpecificRequest() ;
+    public void Request();
+}
+class ConcreteAdaptee implements Adaptee{
+    @Override
+    public void SpecificRequest();
+}
+class ConcreteTarget implements Target{
+    public void Request();
+}
+@enduml
