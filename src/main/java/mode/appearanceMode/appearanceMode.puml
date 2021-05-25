@@ -1,0 +1,44 @@
+@startuml
+abstract class Facade {
+    public abstract void method1();
+    public abstract void method2();
+}
+class ConcreteFacade1 extends Facade {
+    public void method1();
+    public void method2();
+}
+class ConcreteFacade2 extends Facade {
+    public void method1();
+    public void method2();
+}
+class System1 {
+    public void m();
+}
+class System2 {
+    public void m();
+}
+class System3 {
+    public void m();
+}
+class System4 {
+    public void m();
+}
+class System5 {
+    public void m();
+}
+ConcreteFacade1..>System1
+ConcreteFacade1..>System2
+ConcreteFacade1..>System3
+ConcreteFacade2..>System3
+ConcreteFacade2..>System4
+ConcreteFacade2..>System5
+class Main {
+    public static void main(String[] args) {
+        Facade facade = new ConcreteFacade1();
+        facade.method1();
+
+        System.out.println("================");
+        Facade facade1 = new ConcreteFacade2();
+        facade1.method2();}
+}
+@enduml
