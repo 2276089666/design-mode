@@ -20,4 +20,11 @@ class ConcreteAdaptee implements Adaptee{
 class ConcreteTarget implements Target{
     public void Request();
 }
+class Main {
+        Adapter adapter = new Adapter();
+        adapter.setAdaptee(new ConcreteAdaptee());
+        adapter.setTarget(new ConcreteTarget());
+        adapter.Request();
+        adapter.SpecificRequest();
+}
 @enduml
