@@ -1,0 +1,21 @@
+@startuml
+abstract class Colleague {
+    protected Mediator mediator;
+    public abstract boolean operation(String message);
+}
+class ColleagueLandlord extends Colleague {
+
+}
+class ColleagueTenant extends Colleague {
+
+}
+abstract class Mediator {
+    public abstract boolean notifyColleagueTenant(String message);
+    public abstract boolean notifyColleagueLandlord(String message);
+}
+class ConcreteMediator extends Mediator{
+}
+ConcreteMediator-->Colleague
+class Main {}
+Main -->ConcreteMediator
+@enduml
