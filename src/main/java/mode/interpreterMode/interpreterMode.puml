@@ -1,0 +1,39 @@
+@startuml
+interface Expression {
+    int interpret(Map<String,Integer> map);
+}
+class VarExpression implements Expression {
+    private String key;
+
+    public VarExpression(String key);
+
+    public int interpret(Map<String, Integer> map) {
+        return map.get(key);}
+}
+ class SymbolExpression implements Expression {
+    protected Expression left;
+    protected Expression right;
+
+    public SymbolExpression(Expression left, Expression right);
+
+    public int interpret(Map<String, Integer> map);
+}
+class SubExpression extends SymbolExpression {
+    public SubExpression(Expression left, Expression right);
+    public int interpret(Map<String, Integer> map);
+}
+class AddExpression extends SymbolExpression {
+    public AddExpression(Expression left, Expression right);
+    public int interpret(Map<String, Integer> map);
+}
+class Context {
+    private Expression expression;
+
+    public void calculator(String expression);
+
+    public int calculate(Map<String,Integer> map){
+        return this.expression.interpret(map);}
+}
+Context o-- Expression
+Context ..> VarExpression
+@enduml
