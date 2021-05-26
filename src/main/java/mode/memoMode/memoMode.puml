@@ -1,0 +1,22 @@
+@startuml
+class Original {
+    private String value;
+    public String getValue();
+    public void setValue(String value) ;
+    public Original(String value) ;
+
+    public Memento createMemento();
+    public void restoreMemento(Memento memento);
+    }
+class Memento {
+    private String value;
+}
+class Storage {
+    private Memento memento;
+}
+Original -->Memento
+Storage --> Memento
+class Main{}
+Main --> Original
+Main --> Storage
+@enduml
