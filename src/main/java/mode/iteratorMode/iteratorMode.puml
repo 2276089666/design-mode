@@ -1,0 +1,31 @@
+@startuml
+interface Collection {
+    Iterator iterator();
+    Object get(int index);
+    boolean add(Object data);
+    int size();
+}
+interface Iterator {
+    Object pre();
+    Object next();
+    boolean hasNext();
+}
+class ConcreteIterator implements Iterator{
+    private Collection collection;
+}
+class ListCollection implements Collection{
+    public Iterator iterator() {
+        return new ConcreteIterator(this);}
+}
+ConcreteIterator ..> Collection
+class Main {
+    public static void main(String[] args) {
+        ListCollection collection = new ListCollection();
+        collection.add("abc");
+        collection.add(1);
+        Iterator iterator = collection.iterator();
+        while (iterator.hasNext()){
+            System.out.println(iterator.next());
+        }}
+}
+@enduml
