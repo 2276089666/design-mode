@@ -1,0 +1,27 @@
+@startuml
+interface Element {
+    void accept(Visitor visitor);
+}
+interface Visitor {
+    void visit(ProjectElement element);
+}
+class CEOVisitor implements Visitor{
+    public void visit(ProjectElement element);
+}
+class CTOVisitor implements Visitor{
+    public void visit(ProjectElement element);
+}
+CEOVisitor ..>ProjectElement
+CTOVisitor ..>ProjectElement
+ProjectElement ..>Visitor
+class ProjectElement implements Element{
+    private String projectName;
+    private String projectContent;
+    private String visitorName;
+    private Date visitorTime;
+    public void accept(Visitor visitor);
+    public void signature(String visitorName,Date visitorTime);
+}
+class Main{}
+Main ..>ProjectElement
+@enduml
