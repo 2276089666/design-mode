@@ -1,0 +1,25 @@
+@startuml
+abstract class AbstractTemplate {
+    public void templateMethod() {
+        checkNumber();  // 抽号
+        queueUp();      // 排队
+        handleBusiness();  // 业务办理
+        serviceEvaluation();  // 服务评价}
+
+    protected void checkNumber();
+
+    protected void queueUp();
+
+    protected abstract void handleBusiness();
+
+    protected void serviceEvaluation();
+}
+class SaveMoney extends AbstractTemplate{
+    protected void handleBusiness();
+}
+class TakeMoney extends AbstractTemplate{
+    protected void handleBusiness();
+}
+class Main{}
+Main ..>AbstractTemplate
+@enduml
