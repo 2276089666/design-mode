@@ -1,4 +1,4 @@
-package mode.factoryMode.statement;
+package mode.abstractFactoryMode.statement;
 
 /**
  * @Author ws

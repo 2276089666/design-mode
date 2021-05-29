@@ -1,10 +1,10 @@
-package mode.factoryMode.factory;
+package mode.abstractFactoryMode.factory;
 
-import mode.factoryMode.connection.Connection;
-import mode.factoryMode.DBFactory;
-import mode.factoryMode.statement.Statement;
-import mode.factoryMode.connection.MysqlConnection;
-import mode.factoryMode.statement.MysqlStatement;
+import mode.abstractFactoryMode.connection.Connection;
+import mode.abstractFactoryMode.DBFactory;
+import mode.abstractFactoryMode.statement.Statement;
+import mode.abstractFactoryMode.connection.MysqlConnection;
+import mode.abstractFactoryMode.statement.MysqlStatement;
 
 /**
  * @Author ws

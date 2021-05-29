@@ -1,0 +1,24 @@
+@startuml
+interface Callable {
+    +String brand();
+}
++class HuaWei implements Callable {
+
+}
++class IPhone implements Callable {
+
+}
++class Xiaomi implements Callable {
+
+}
++class Factory {
+    + Callable createPhone(String phoneName){}
+}
+
++class Client{
+}
+Factory --> HuaWei
+Factory --> IPhone
+Factory --> Xiaomi
+Client -->Factory
+@enduml

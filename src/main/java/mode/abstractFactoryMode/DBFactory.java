@@ -1,7 +1,7 @@
-package mode.factoryMode;
+package mode.abstractFactoryMode;
 
-import mode.factoryMode.connection.Connection;
-import mode.factoryMode.statement.Statement;
+import mode.abstractFactoryMode.connection.Connection;
+import mode.abstractFactoryMode.statement.Statement;
 
 /**
  * @Author ws

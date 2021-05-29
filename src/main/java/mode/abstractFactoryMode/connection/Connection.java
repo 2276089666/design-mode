@@ -1,4 +1,4 @@
-package mode.factoryMode.connection;
+package mode.abstractFactoryMode.connection;
 
 /**
  * @Author ws

@@ -7,6 +7,6 @@ package mode.singletonMode;
  */
 public class Main {
     public static void main(String[] args) {
-        Singleton singleton = SingletonBuilder.getSingleton();
+        Singleton_DCL singleton = Singleton_DCL.getInstance();
     }
 }
