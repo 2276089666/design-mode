@@ -1,0 +1,24 @@
+@startuml
+abstract class AbstractState {
+    abstract void action(Context context);
+}
+class HolidayState extends AbstractState{
+}
+class WorkState extends AbstractState{
+
+}
+class Context {
+    private AbstractState abstractState;
+
+    public Context(AbstractState abstractState);
+
+    public AbstractState getAbstractState();
+
+    public void setAbstractState(AbstractState abstractState) ;
+
+    public void action();
+}
+Context ..>AbstractState
+class Main
+Main ..>Context
+@enduml
