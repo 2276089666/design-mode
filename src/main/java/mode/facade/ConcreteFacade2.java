@@ -1,9 +1,9 @@
-package mode.appearanceMode;
+package mode.facade;
 
-import mode.appearanceMode.module.System1;
-import mode.appearanceMode.module.System2;
-import mode.appearanceMode.module.System3;
-import mode.appearanceMode.module.System4;
+import mode.facade.module.System1;
+import mode.facade.module.System2;
+import mode.facade.module.System3;
+import mode.facade.module.System4;
 
 /**
  * @Author ws

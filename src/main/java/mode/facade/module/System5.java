@@ -1,4 +1,4 @@
-package mode.appearanceMode.module;
+package mode.facade.module;
 
 /**
  * @Author ws

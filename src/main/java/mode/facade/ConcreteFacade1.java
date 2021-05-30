@@ -1,6 +1,6 @@
-package mode.appearanceMode;
+package mode.facade;
 
-import mode.appearanceMode.module.*;
+import mode.facade.module.*;
 
 /**
  * @Author ws
