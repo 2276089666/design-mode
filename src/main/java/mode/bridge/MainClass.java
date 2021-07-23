@@ -1,6 +1,6 @@
 package mode.bridge;
 
-import mode.bridge.imageFormat.GIFImage;
+
 import mode.bridge.imageFormat.JPGImage;
 import mode.bridge.imageFormat.PNGImage;
 import mode.bridge.systemType.MacImpl;

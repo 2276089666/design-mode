@@ -14,7 +14,7 @@ public class Mom implements Observer {
         if (event.consumed){
             return;
         }
-        System.out.println("Mom "+event.getTime()+"go to"+event.getLocation()+" have a feeding");
+        System.out.println("Mom "+event.getTime()+" go to "+event.getLocation()+" have a feeding");
         event.consumed=true;
     }
 

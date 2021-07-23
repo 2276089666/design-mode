@@ -19,7 +19,7 @@ public class Dad implements Observer {
         }
         Object source = event.getSource();
         if (source instanceof Child){
-            System.out.println("Dad"+event.getTime()+" go to "+event.getLocation()+" give a hug with child");
+            System.out.println("Dad "+event.getTime()+" go to "+event.getLocation()+" give a hug with child");
         }
         event.consumed=true;
     }

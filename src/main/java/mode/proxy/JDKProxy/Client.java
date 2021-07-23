@@ -24,6 +24,6 @@ public class Client {
         Subject2 realSubject2 = new RealSubject2();
         Subject2 proxyInstance1 = (Subject2) Proxy.newProxyInstance(RealSubject2.class.getClassLoader(), new Class[]{Subject2.class}, new LogProxy(realSubject2));
         int play = proxyInstance1.play();
-        System.out.println(play);
+        System.out.println("method play() return value is:\t"+play);
     }
 }

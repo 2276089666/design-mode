@@ -17,6 +17,6 @@ public class Client {
         enhancer.setSuperclass(RealSubject2.class);
         RealSubject2 realSubject2= (RealSubject2) enhancer.create();
         int play = realSubject2.play();
-        System.out.println(play);
+        System.out.println("method play() return value is:\t"+play);
     }
 }

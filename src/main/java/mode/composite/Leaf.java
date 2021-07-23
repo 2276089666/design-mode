@@ -16,7 +16,7 @@ public class Leaf extends Component{
         for (int i = 0; i < level; i++) {
             System.out.print("--");
         }
-        System.out.println("left:" + name);
+        System.out.println("leaf:" + name);
     }
 
     @Override

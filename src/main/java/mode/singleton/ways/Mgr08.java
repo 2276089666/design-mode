@@ -4,7 +4,7 @@ import java.lang.reflect.InvocationTargetException;
 
 /**
  * 最完美的写法
- * 不仅可以解决线程同步，还可以防止反序列化。（防止用反射强行new）
+ * 不仅可以解决线程同步，还可以防止反序列化,并防止用反射强行new
  * 原因：枚举没有构造方法，反射拿不到构造方法强行创建不了对象
  */
 public enum Mgr08 {
